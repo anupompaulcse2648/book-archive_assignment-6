@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/creativity.ico" type="image/x-icon">
+
+    <!-- Adding Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body class="mx-5">
+    <!-- Start Header section -->
+    <header>
+        <h1 class="text-primary text-center mt-3">BOOK ARCHIVE</h1>
+        <h3 class="text-primary text-center mt-3">The vehicle of knowledge is the book.</h3>
+        <p class="text-secondary text-center">The book is the best Friend....</p>
+    </header>
+    <!-- End Header section -->
+
+    <main>
+        <!-- Start input field section  -->
+        <section>
+            <div class="container">
+                <form class="col-md-6 m-auto py-5">
+                    <div class="input-group mb-2">
+                        <input id="inputField" type="text" class="form-control"
+                            placeholder="Enter Search your favourite book name here...">
+                        <div class="input-group-append">
+                            <button onclick="search()" type="button" class="btn btn-danger">Search</button>
+                        </div>
+                    </div>
+                    <p><span class="text-secondary" id="found"></span></p>
+                </form>
+        </section>
+        <!-- End input field section  -->
+
+        <!-- Start book list part  -->
+        <section>
+            <div id="bookCard" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+        </section>
+        <!-- End book list part  -->
+
+        <!-- Loadding spinner part  -->
+        <div style="visibility: hidden" id="sppiner" class="d-flex justify-content-center">
+            <div class="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+
+        <!-- Start Display Error message part -->
+        <section>
+            <div style="display:none" id="error" class="text-center d-gri">
+                <h1 class="my-5 d-flex justify-content-center text-danger">Your book was not found, Please Enter the
+                    correct book name here...</h1>
+            </div>
+            <div style="display:none" id="emptyInput" class="text-center d-gri">
+                <h1 class="my-5 d-flex justify-content-center text-danger">Write the name of the book in the input box
+                    without blank input...</h1>
+            </div>
+        </section>
+        <!-- End Display Error message part -->
+    </main>
+
+
+    <!-- Bootstrap JavaScript file part  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- custom book archive javascript file part   -->
+    <script src="app.js"></script>
+</body>
+
+</html>
